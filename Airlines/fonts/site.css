@@ -1,0 +1,14 @@
+﻿.flightCard {
+    /*background-color: aliceblue;*/
+    border-radius: 10px;
+    border-color:black ;
+    padding: 5px;  
+    margin: 5px;
+}
+.flightcity {
+    background-color: azure;
+}
+
+.approvedflight {
+    
+}
