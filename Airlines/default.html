@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Airlines!</title>
+ <!--   <meta charset="utf-8"/>-->
+    <link href="Content/bootstrap.css" rel="stylesheet "/>
+    <link href="fonts/site.css" rel="stylesheet" />
+</head>
+<body ng-app="airlineApp">
+    <div class="container" ng-controller="flightController">
+
+        <h1>Airlines!</h1>
+
+        <div class="=row">
+            <div class="col-md-6" ng-repeat="flight in flights">
+                <div class="flightCard">
+                    <h3>{{flight.airline}}</h3>
+                    <div>
+                        <span>Price:{{flight.price}}</span>
+                        <span>Price:{{flight.totalDuration}}</span>
+                        <hr />
+                        <div>
+                            <span>Start Time: {{flight.startTime}}</span>
+                            <span>End Time: {{flight.endTime}}</span>
+
+                            <ul class="breadcrumb">
+                                <li ng-repeat="city in flight.cities">
+                                    {{city}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/angular.js"></script>
+    <script src="airlinesApp/airlineApp.js"></script>
+    <script src="airlinesApp/controllers/flightController.js"></script>
+</body>
+</html>
